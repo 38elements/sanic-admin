@@ -4,7 +4,7 @@ setup(
     name='sanic-admin',
     version='0.0.1',
     author='38elements',
-    description='',
+    description='sanic-admin is a command line tool for automatically restarting sanic.',
     license='MIT License',
     url='https://github.com/38elements/sanic-admin',
     install_requires=[
@@ -13,7 +13,7 @@ setup(
     packages=[
         'sanic-admin'
     ],
-    keywords='',
+    keywords='sanic',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Programming Language :: Python :: 3.5',

@@ -6,9 +6,7 @@ The code(*.py) under the current working directory is changed, `sanic` will auto
 ## Installation
 
 ```
-git clone git@github.com:38elements/sanic-admin.git
-cd sanic-admin
-python setup.py install
+pip install sanic-admin
 ```
 
 ## Usage
