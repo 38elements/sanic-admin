@@ -1,6 +1,6 @@
 # sanic-admin
 
-`sanic-admin` is a command line tool for automatically restarting `sanic`.
+`sanic-admin` is a command line tool for automatically restarting `sanic`.  
 The code(*.py) under the current working directory is changed, `sanic` will automatically restart.
 
 ## Installation
