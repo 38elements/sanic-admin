@@ -15,8 +15,13 @@ pip install sanic-admin
 python -m sanic-admin server.py
 ```
 
-## Todo
+## Setting
 
-* Change the watching root directory with the setting file.
+You can change the behavior of `sanic-admin` by putting a file named` sanic-admin.json` in current working directory like the contents below.
 
-* Change the watching file extension with the setting file.
+```
+{
+    "patterns": ["*.html", "*.css", "*.py"], // default ["*.py"]
+    "path": "/foo/bar" // default current working directory
+}
+```
