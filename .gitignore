@@ -93,3 +93,5 @@ ENV/
 .~
 node_modules
 *.sqlite3
+sanic-admin.json
+server.py
