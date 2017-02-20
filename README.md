@@ -14,3 +14,9 @@ pip install sanic-admin
 ```
 python -m sanic-admin server.py
 ```
+
+## TODO
+
+* Change the watching root directory with the setting file.
+
+* Change the watching file extension with the setting file.
