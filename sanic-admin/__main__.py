@@ -36,7 +36,7 @@ class RestartHandler(PatternMatchingEventHandler):
 
 setting_file = None
 setting = {
-    'path': None,
+    'paths': [os.getcwd()],
     'patterns': ['*.py']
 }
 try:
@@ -52,10 +52,11 @@ if setting_file:
             setting[key] = _setting[key]
 
 
-path = setting['path'] if setting['path'] else os.getcwd()
+paths = setting['paths']
 observer = Observer()
 handler = RestartHandler(sys.executable, sys.argv[1:], setting['patterns'])
-observer.schedule(handler, path, recursive=True)
+for path in paths:
+    observer.schedule(handler, path, recursive=True)
 observer.start()
 while True:
     try:

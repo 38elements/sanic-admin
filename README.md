@@ -22,7 +22,7 @@ You can change the behavior of `sanic-admin` by putting a file named` sanic-admi
 ```
 {
     "patterns": ["*.html", "*.css", "*.py"], // default ["*.py"]
-    "path": "/foo/bar" // default current working directory
+    "paths": ["/foo1/bar1", "/foo2/bar2"] // default current working directory
 }
 ```
 

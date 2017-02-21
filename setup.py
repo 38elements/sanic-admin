@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='sanic-admin',
-    version='0.0.2',
+    version='0.0.3',
     author='38elements',
     description='sanic-admin is a command line tool for automatically restarting sanic.',
     license='MIT License',
