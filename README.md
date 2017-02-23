@@ -25,7 +25,3 @@ You can change the behavior of `sanic-admin` by putting a file named` sanic-admi
     "paths": ["/foo1/bar1", "/foo2/bar2"] // default current working directory
 }
 ```
-
-## Todo
-
-* Custom Protocol for Development
