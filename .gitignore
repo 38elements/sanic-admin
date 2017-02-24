@@ -95,3 +95,7 @@ node_modules
 *.sqlite3
 sanic-admin.json
 server.py
+before.py
+before_each.py
+after.py
+after_each.py
