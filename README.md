@@ -12,7 +12,7 @@ pip install sanic-admin
 ## Usage
 
 ```
-python -m sanic-admin server.py
+sanic-admin server.py
 ```
 
 ## Setting

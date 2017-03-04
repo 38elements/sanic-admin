@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='sanic-admin',
-    version='0.0.4',
+    version='0.0.5',
     author='38elements',
     description='sanic-admin is a command line tool for automatically restarting sanic.',
     license='MIT License',
@@ -11,9 +11,14 @@ setup(
         'watchdog>=0.8.3'
     ],
     packages=[
-        'sanic-admin'
+        'sanic_admin'
     ],
     keywords='sanic',
+    entry_points={
+        'console_scripts': [
+            'sanic-admin = sanic_admin.entry_point:run',
+        ]
+    },
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Programming Language :: Python :: 3.5',
