@@ -85,3 +85,7 @@ def run():
     if setting['after']:
         exec(open(setting['after']).read())
     observer.join()
+
+
+if __name__ == '__main__':
+    run()
