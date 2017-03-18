@@ -1,7 +1,6 @@
 import os
 import sys
 import time
-import json
 from subprocess import Popen
 from signal import SIGTERM
 from watchdog.observers import Observer
@@ -37,30 +36,7 @@ class RestartHandler(PatternMatchingEventHandler):
         self._start()
 
 
-def run():
-    SETTING_FILE_NAME = 'sanic-admin.json'
-    setting_file = None
-    setting = {
-        'paths': [os.getcwd()],
-        'patterns': ['*.py'],
-        'before': None,
-        'before_each': None,
-        'after': None,
-        'after_each': None
-    }
-
-    try:
-        setting_file = open(SETTING_FILE_NAME, 'r')
-    except:
-        pass
-
-    if setting_file:
-        _setting = json.load(setting_file)
-        setting_file.close()
-        for key in setting.keys():
-            if key in _setting:
-                setting[key] = _setting[key]
-
+def run(setting):
     if setting['before']:
         exec(open(setting['before']).read())
 
@@ -88,4 +64,12 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    run({
+        'paths': [os.getcwd()],
+        'patterns': ['*.py'],
+        'before': None,
+        'before_each': None,
+        'after': None,
+        'after_each': None,
+        'app': 'app'
+    })
