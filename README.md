@@ -11,8 +11,16 @@ pip install sanic-admin
 
 ## Usage
 
+#### Auto reload
+
 ```
 sanic-admin server.py
+```
+
+#### Display urls
+
+```
+sanic-admin -urls server.py
 ```
 
 ## Setting
@@ -28,16 +36,19 @@ You can change the behavior of `sanic-admin` by putting a file named` sanic-admi
     // default current working directory
     "paths": ["/foo1/bar1", "/foo2/bar2"],
     // File to be executed when sanic-admin starts
-    // default none
+    // default None
     "before": "before.py",
     // File to be executed before sanic restarts
-    // default none
+    // default None
     "before_each": "before_each.py",
     // File to be executed when sanic-admin exits
-    // default none
+    // default None
     "after": "after.py",
     // File to be executed after sanic restarts
-    // default none
-    "after_each": "after_each.py"
+    // default None
+    "after_each": "after_each.py",
+    // Variable name of sanic instance 
+    // default "app" 
+    "app": "app"
 }
 ```
